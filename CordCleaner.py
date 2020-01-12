@@ -12,8 +12,8 @@ config = ConfigParser()
 
 config.read('config.ini')
 
-username = config.get('SETTINGS', 'username')
-password = config.get('SETTINGS', 'password')
+token = config.get('SETTINGS', 'token')
+command = config.get('SETTINGS', 'command')
 
 os.system("title CordCleaner - 4W#2100")
 def clear():
@@ -22,25 +22,25 @@ def clear():
 client = discord.Client()
 
 clear()
-with open('config.json', 'r') as handle:
-    config = json.load(handle)
-    token = (config["token"])
-    if token == "Your Token":
-        print ("You need to setup your token! - Run the program again (After setting up token)")
-        time.sleep(5)
-        sys.exit()
-    command = (config["command"])
-    print("")
-    print("")
-    print("CORD CLEANER | By 4W#2100")
-    print("")
-    print("")
-    print("Logging in - Please hold on")
-    print("")
 
+if token == "Token":
+    print ("[!] You need to setup your token!")
+    time.sleep(3)
+    print("[!] Shutting down...")
+    sys.exit()
+
+print("")
+print("")
+print("CORD CLEANER | By 4W#2100")
+print("")
+print("")
+print("Logging in - Please hold on")
+print("")
+
+t = str(token)
 @client.event
 async def on_ready():
-    print("Your Token: " + str(token))
+    print("Your Token: ***************" + t[15:])
     print("CordCleaner Command: " + str(command))
     print (f'Logged in as {client.user.name} | ID: {client.user.id}')
     print("")
