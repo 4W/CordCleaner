@@ -1,0 +1,2 @@
+# CordCleaner
+ Discord message deleter
