@@ -1,6 +1,9 @@
 # CordCleaner
  A Discord message deleter
 
+## THIS PROJECT IS NOT MAINTAINED AT ALL
+## I will also not offer on this project 
+
 ### Make sure you have all dependencies before running
 
 ## HOW TO USE:
